@@ -1,0 +1,150 @@
+.nav {
+    overflow: hidden;
+}
+.sk {
+    position: absolute;
+    left: 190px;
+    top: 40px;
+    border-left: 1px solid #c81523;
+    padding: 3px 0 0 14px;
+}
+.sk_list {
+    float: left;
+}
+.sk_con {
+    float: left;
+}
+.sk_con ul li {
+    float: left;
+}
+.sk_list ul li {
+    float: left;
+}
+.sk_list ul li a {
+    /* a标签设置成块级元素 */
+    display: block;
+    line-height: 47px;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+.sk_con  ul li a {
+    display: block;
+    line-height: 49px;
+    padding: 0 20px;
+    font-size: 14px;
+}
+/* 指定ul中最后一个li 中的a标签添加after伪元素 */
+.sk_con ul li:last-child a::after {
+    content: '\e91e';
+    font-family: 'icomoon';
+
+}
+.sk_bd ul li {
+    overflow: hidden;
+    float: left;
+    /* 脱标的盒子不会有margin塌陷问题 */
+    margin-top: 10px;
+    margin-right: 13px;
+    margin-bottom: 10px;
+    width: 290px;
+    height: 460px;
+    /* 要先给li一个透明边框  应为这样li不会应为hover事件所添加的边框导致位置变化 */
+    border: 1px solid transparent;
+    box-shadow: 0 2px 3px 3px rgba(0,0,0,0.1);
+    transition: transform,0.4s;
+}
+.sk_bd ul li:nth-child(4n) {
+    margin-right: 0;
+}
+.sk_bd ul li:hover {
+    /* transform: translate()不会影响其他盒子; */
+    transform: translateY(-3px);
+    border: 1px solid #c81523;
+}
+img {
+    width: 60%;
+    height: 60%;
+    margin: 3px 20%;
+    vertical-align: middle;
+}
+
+p {
+    margin: 8px 10px;
+    font-size: 18px;
+}
+
+.info span:first-child {
+
+    margin-left: 10px;
+    color: red;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.info span:nth-child(2) {
+
+    margin-left: 10px;
+    color: rgb(105, 105, 105);
+    font-size: 9px;
+    font-weight: 400;
+}
+
+.guodu {
+    margin: 6px 0;
+    text-align: center;
+    width: 100%;
+    height: 16px;
+    line-height: 16px;
+    font-size: 13px;
+}
+
+.guodu::before {
+    content: '已售80%';
+    color: rgb(189, 39, 22);
+    float: left;
+    margin: 0 5px 0 10px;
+
+}
+
+.guodu::after {
+    float: left;
+    content: '剩余29件';
+    margin: 0 5px 0 10px;
+}
+
+.guodu>div {
+    float: left;
+    height: 16px;
+    width: 50%;
+    margin: 0 auto;
+    border: 1px rgb(189, 39, 22) solid;
+    border-radius: 10px;
+    padding: 1px;
+}
+
+.guodu>div .d {
+    height: 12px;
+    width: 0;
+    border-radius: 10px;
+    background-color: rgb(219, 30, 9);
+    transition: width 0.8s;
+}
+
+.guodu>div:hover .d {
+    width: 80%;
+}
+
+.sk_bd ul li a {
+    display: block;
+    text-align: center;
+    height: 51px;
+    line-height: 51px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: rgb(189, 39, 22);
+    
+}
